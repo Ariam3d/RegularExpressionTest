@@ -5,7 +5,6 @@ name: Python regular exp application
 language: python
 python:
   - "3.9.5"
-  - "nightly"
 
 on:
   push:
