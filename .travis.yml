@@ -1,25 +1,12 @@
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 
-name: Python regular exp application
 language: python
 python:
-  - "3.9.5"
-
-on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
-
-jobs:
-  build:
-    runs-on: windows-latest
-
-    steps:
-      - uses: actions/checkout@v2
-      - name: Set up Python 3.9.5
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.9.5
-      script: python3 main.py
+  - "3.9.5" # 3.9 development branch
+# command to install dependencies
+install:
+  - pip install -r requirements.txt
+# command to run tests
+script:
+  - pytest
