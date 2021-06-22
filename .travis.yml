@@ -5,5 +5,12 @@ language: python
 python:
   - "3.9" # 3.9 development branch
 # command to run tests
+addons:
+  sonarcloud:
+    organization: "seeker-github"
+token:
+  secure: $SONAR_TOKEN
 script:
   - python3 main.py
+after-success:
+  - sonar-scanner
