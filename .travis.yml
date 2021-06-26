@@ -7,7 +7,7 @@ python:
 # command to run tests
 addons:
   sonarcloud:
-    organization: "seeker-github"
+    organization: "ariam3d"
 token:
   secure: $SONAR_TOKEN
 script:
