@@ -1,19 +1,9 @@
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
-
+name: Main Workflow
 language: python
 python:
   - "3.9" # 3.9 development branch
-# command to run tests
-on:
-  # Trigger analysis when pushing in master or pull requests, and when creating
-  # a pull request. 
-  push:
-    branches:
-      - main
-  pull_request:
-      types: [opened, synchronize, reopened]
-name: Main Workflow
 jobs:
   sonarcloud:
 addons:
